@@ -7,7 +7,6 @@ pipeline {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
                         sh "docker build -t bhargavdeevi/emailservice:latest ."
-                        sh "docker build --no-cache -t myimage ."
                     }
                 }
             }
